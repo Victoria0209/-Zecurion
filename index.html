@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script defer type="module" src="js/main.js"></script>
+    <title>Тестовое</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="wrap">
+            <section class="key-indicators">
+                <h1 class="visually-hidden">Основные показатели</h1>
+                <ul class="key-indicators__list">
+                    <!-- Данные вставляются через JS -->
+                </ul>
+            </section>
+            <section class="data">
+                <div class="data__plug">
+                    <img class="data__img" src="/заглушка.jpg" alt="Данные не обнаружены">
+                </div>
+            </section>
+
+            <section class="indicators">
+                <ul class="indicators__list">
+                    <li class="indicators__item incidents">
+                        <h2 class="incidents__head">Пользователи по Инцидентам</h2>
+                        <table class="incidents__table">
+                            <tbody class="table-body">
+                                <tr class="incidents__table-header">
+                                    <th class="incidents__header">Пользователь</th>
+                                    <th class="incidents__header"></th>
+                                    <th class="incidents__header"></th>
+                                    <th class="incidents__header">Инциденты</th>
+                                </tr>
+                                <!-- Данные вставляются через JS -->
+                            </tbody>
+                        </table>
+                    </li>
+
+                    <li class="indicators__item site-categories">
+                        <h2 class="site-categories__head">Категории сайтов</h2>
+                        <table class="site-categories__table">
+                            <tbody class="table-categories">
+                                <tr class="site-categories__table-header">
+                                    <th class="site-categories__header">Категория</th>
+                                    <th class="site-categories__header">Количество инцидентов</th>
+                                </tr>
+                                <!-- Данные вставляются через JS -->
+                            </tbody>
+                        </table>
+                    </li>
+
+                    <li class="indicators__item discipline">
+                        <h2 class="discipline__head">Дисциплина</h2>
+                        <table class="discipline__table">
+                            <tbody class="table-discipline">
+                                <tr class="discipline__table-header">
+                                    <th class="discipline__header discipline__header--padding">Дата</th>
+                                    <th class="discipline__header">Приход</th>
+                                    <th class="discipline__header">Уход</th>
+                                    <th class="discipline__header">Рабочее время</th>
+                                </tr>
+                                <!-- Данные вставляются через JS -->
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+
+            </section>
+        </div>
+    </main>
+
+    <template id="key-indicator">
+        <ol class="key-indicators__item">
+            <p class="key-indicators__head"></p>
+            <div class="key-indicators__value">
+                <span class="key-indicators__total"></span>
+                <div class="key-indicators__wrap">
+                    <span class="key-indicators__triangle"></span>
+                    <div class="key-indicators__dynamics"></div>
+                </div>
+            </div>
+        </ol>
+    </template>
+
+    <template id="table-incidents">
+        <tr class="incidents__table-body">
+            <td class="incidents__body-name"></td>
+            <td class="incidents__body">
+                <div class="incidents__body-wrap "><span class="incidents_one"></span><span class="circle-red"></span></div>
+            </td>
+            <td class="incidents__body">
+                <div class="incidents__body-wrap"><span class="incidents_two"></span><span class="circle-orange"></span></div>
+            </td>
+            <td class="incidents__body">
+                <div class="incidents__body-wrap"><span class="incidents_three"></span><span class="circle-green"></span></div>
+            </td>
+        </tr>
+    </template>
+
+    <template id="site-categorie">
+        <tr class="site-categories__table-body">
+            <td class="site-categories__body"></td>
+            <td class="site-categories__body">
+                <div class="site-categories__body-value">
+                    <span class="site-categories__body-total"></span>
+                    <div class="site-categories__body-wrap">
+                        <span
+                            class="site-categories__body-triangle"></span>
+                        <div class="site-categories__body-dynamics"></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </template>
+
+    <template id="discipline">
+        <tr class="discipline__table-body">
+            <td class="discipline__body discipline__body--padding date"><span></span></td>
+            <td class="discipline__body "><span class="coming"></span> <span class="coming-difference-text plus"></span></td>
+            <td class="discipline__body "><span class="leave"></span> <span class="leave-difference-text minus"></span></td>
+            <td class="discipline__body working-time"><span class=" difference-text total"></span></td>
+        </tr>
+    </template>
+
+</body>
+
+</html>
